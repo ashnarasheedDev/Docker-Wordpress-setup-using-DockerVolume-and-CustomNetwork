@@ -43,26 +43,28 @@ $ docker network create wp-network
 
 ><b>Create MYSQL Container</b>
 
- --name mysql-server: Assigns the name "mysql-server" to the container for easy reference.
+  --name mysql-server: Assigns the name "mysql-server" to the container for easy reference.
  
- --network wp-network: Connects the container to the "wp-network" custom network.
+  --network wp-network: Connects the container to the "wp-network" custom network.
 
- -v mysql-vol:/var/lib/mysql/: Creates and mounts a Docker volume named "mysql-vol" to the container's "/var/lib/mysql/" directory. This volume will be used to persist the MySQL database files.
+  -v mysql-vol:/var/lib/mysql/: Creates and mounts a Docker volume named "mysql-vol" to the container's "/var/lib/mysql/" directory. This volume will be used to persist the MySQL database files.
 
- -e MYSQL_ROOT_PASSWORD="root@123": Sets the environment variable MYSQL_ROOT_PASSWORD to "root@123". This sets the root password for the MySQL server.
+  -e MYSQL_ROOT_PASSWORD="root@123": Sets the environment variable MYSQL_ROOT_PASSWORD to "root@123". This sets the root password for the MySQL server.
 
- -e MYSQL_DATABASE="wordpress": Sets the environment variable MYSQL_DATABASE to "wordpress". This creates a new MySQL database named "wordpress".
+  -e MYSQL_DATABASE="wordpress": Sets the environment variable MYSQL_DATABASE to "wordpress". This creates a new MySQL database named "wordpress".
  
- -e MYSQL_USER="wpuser": Sets the environment variable MYSQL_USER to "wpuser". This creates a new MySQL user named "wpuser". 
+  -e MYSQL_USER="wpuser": Sets the environment variable MYSQL_USER to "wpuser". This creates a new MySQL user named "wpuser". 
  
- -e MYSQL_PASSWORD="wpuser@123": Sets the environment variable MYSQL_PASSWORD to "wpuser@123". This sets the password for the "wpuser" MySQL user.
+  -e MYSQL_PASSWORD="wpuser@123": Sets the environment variable MYSQL_PASSWORD to "wpuser@123". This sets the password for the "wpuser" MySQL user.
  
- mysql:debian: Specifies the Docker image to use for the container. In this case, it uses the "mysql" image with the "debian" tag.
+   mysql:debian: Specifies the Docker image to use for the container. In this case, it uses the "mysql" image with the "debian" tag.
+
 ```
 $ docker container run -d --restart always --name mysql-server --network wp-network  -v mysql-vol:/var/lib/mysql/ -e MYSQL_ROOT_PASSWORD="root@123" -e MYSQL_DATABASE="wordpress" -e MYSQL_USER="wpuser" -e MYSQL_PASSWORD="wpuser@123" mysql:debian
 
 4c58f85361cd614108f78c9d98176d3f49a935851912ebfaa8f4ee3c0c770e41
  ```
+ 
  ><b> Create wordpress Container</b>
 
     -d: Runs the container in detached mode, meaning it runs in the background.
