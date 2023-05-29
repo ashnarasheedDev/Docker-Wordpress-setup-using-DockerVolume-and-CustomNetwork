@@ -22,7 +22,7 @@ systemctl start docker.service
 systemctl enable docker.service
 ```
 
-### Step 2 - Creating Custom Networrk and Volumes
+### Step 2 - Creating Custom Network and Volumes
 
 ><b> Create Volume for mysql</b>
  ```
