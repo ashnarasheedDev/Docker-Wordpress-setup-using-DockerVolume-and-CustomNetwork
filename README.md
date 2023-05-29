@@ -42,7 +42,7 @@ $ docker network create wp-network
 ### Creating Wordpress and MYSQL Containers 
 
 ><b>Create MYSQL Container</b>
-
+```
   --name mysql-server: Assigns the name "mysql-server" to the container for easy reference.
  
   --network wp-network: Connects the container to the "wp-network" custom network.
@@ -58,7 +58,7 @@ $ docker network create wp-network
   -e MYSQL_PASSWORD="wpuser@123": Sets the environment variable MYSQL_PASSWORD to "wpuser@123". This sets the password for the "wpuser" MySQL user.
  
    mysql:debian: Specifies the Docker image to use for the container. In this case, it uses the "mysql" image with the "debian" tag.
-
+```
 ```
 $ docker container run -d --restart always --name mysql-server --network wp-network  -v mysql-vol:/var/lib/mysql/ -e MYSQL_ROOT_PASSWORD="root@123" -e MYSQL_DATABASE="wordpress" -e MYSQL_USER="wpuser" -e MYSQL_PASSWORD="wpuser@123" mysql:debian
 
