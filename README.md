@@ -1,4 +1,4 @@
-# Docker-Wordpress-setup-using-DockerVolume-and-CustomNetworks
+# Description
 The Docker WordPress setup using Docker volumes and custom networks involves deploying a WordPress application within Docker containers while leveraging Docker volumes for data persistence and creating custom networks for communication between containers. rdpress-setup-using-DockerVolume-and-CustomNetworks
 
 Docker is an open-source platform that allows you to automate the deployment, scaling, and management of applications using containerization. Containers are lightweight, isolated environments that package everything needed to run an application, including the code, runtime, system tools, and libraries. Docker provides a consistent and reproducible environment for running applications across different operating systems and infrastructure.
