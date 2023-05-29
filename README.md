@@ -12,3 +12,13 @@ Docker is an open-source platform that allows you to automate the deployment, sc
   -  WordPress Container: The WordPress container is built using a Docker image that contains the WordPress application and its dependencies. The container is configured to use the Docker volume for persisting data. It is also connected to the custom network to enable communication with other containers.
 
   -  Database Container: Along with the WordPress container, a separate container is created for the database, such as MySQL or MariaDB. The database container is also connected to the custom network, allowing the WordPress container to access and store data in the database. The database container may use its own Docker volume for persistent storage of database files.
+
+
+### Step 1 - Docker Installation
+
+```
+yum install docker -y
+systemctl start docker.service
+systemctl enable docker.service
+```
+
