@@ -97,3 +97,20 @@ latest: Pulling from library/wordpress
 f03b40093957: Already exists 
 662d8f2fcdb9: Pull complete 
  ```
+ 
+ ### Result
+ 
+- **I was able to connect to MYSQL db using the credentials**
+
+![alt text](https://i.ibb.co/GtcwDCj/git-docker-wp-setup-mysql.png)
+
+
+-  **Contents in wp-vol**
+
+
+![alt text](https://i.ibb.co/RzBdyk2/wp-vol.png)
+
+
+-  **Contents in mysql-vol**
+
+![alt text](https://i.ibb.co/rm91Hfd/mysql-vol.png)
