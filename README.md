@@ -39,7 +39,7 @@ wp-vol
 $ docker network create wp-network
 0a411e84f35356e68a51a2e2ad0c2fc9090c26bfb78d559ede0a877fd58acd82
 ``` 
-### Creating Wordpress and MYSQL Containers 
+### Step 3 - Creating Wordpress and MYSQL Containers 
 
 ><b>Create MYSQL Container</b>
 ```
